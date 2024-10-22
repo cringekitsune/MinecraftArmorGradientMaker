@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Leather Armor Gradients</title>
+    <link rel="stylesheet" href="./assets/data/main.css">
+</head>
+
+<!--
+Ouoooooh we got a html hacker here :)
+-->
+
+<body>
+    <main>
+        <header>
+            <img class="background" src="./assets/media/header-bg.png">
+            <img class="logo" src="./assets/media/logo.png">
+        </header>        
+
+        <div class="simple-flex">
+            <p>Welcome to my Minecraft Armor Gradient maker. Typically, lighter colors work better than darker ones, which you can tell by the higher percentages.
+            This is best viewed on a computer.</p>
+            <div class="flex-inside">
+                <label for="first_color_input" class="ui-element">Select start color</span></label>
+                <input type="color" name="first_color_input" id="first_color_input">
+                <input type="text" id="first_color_input_hex" class="ui-input">
+                <div id="first_color_preview" class="color"></div>
+
+                <label for="last_color_input" class="ui-element">Select end color</span></label>
+                <input type="color" name="last_color_input" id="last_color_input">
+                <input type="text" id="last_color_input_hex" class="ui-input">
+                <div id="last_color_preview" class="color"></div>
+            </div>
+            <div class="flex-inside">
+                <input type="button" class="ui-element" value="Generate!" onclick="update()">
+                <input type="button" class="ui-element" value="Save armor screenshot" onclick="screenshot()">
+                <input type="button" class="ui-element" value="Get a random gradient!" onclick="makeRandomGradient(), update()">
+            </div>
+        </div>
+        <div class="grid ui" id="to-screenshot">
+            <div id="color-gradient"></div>
+            <div class="grid_section">
+                <div class="grid_cell">
+                    <img src="./assets/media/helmet.webp" alt="" id="helmet">
+                </div>
+                <div class="grid_cell">
+                    <img src="./assets/media/chestplate.webp" alt="" id="chestplate">
+                </div>
+                <div class="grid_cell">
+                    <img src="./assets/media/leggins.webp" alt="" id="leggins">
+                </div>
+                <div class="grid_cell">
+                    <img src="./assets/media/boots.webp" alt="" id="boots">
+                </div>                
+            </div>
+            <div class="grid_section">
+                <div class="grid_cell" id="dye_container_helmet">
+                </div>
+                <div class="grid_cell" id="dye_container_chestplate">
+                </div>
+                <div class="grid_cell" id="dye_container_leggins">
+                </div>
+                <div class="grid_cell" id="dye_container_boots">
+                </div>
+            </div>
+            <div class="grid_section">
+                <div class="grid_cell center">
+                    <p id="accuracy_container_helmet"></p>
+                </div>
+                <div class="grid_cell center">
+                    <p id="accuracy_container_chestplate"></p>
+                </div>
+                <div class="grid_cell center">
+                    <p id="accuracy_container_leggins"></p>
+                </div>
+                <div class="grid_cell center">
+                    <p id="accuracy_container_boots"></p>
+                </div>
+            </div>
+            <div class="grid_section">
+                <div class="grid_cell center">
+                    <p id="hex_container_helmet"></p>
+                </div>
+                <div class="grid_cell center">
+                    <p id="hex_container_chestplate"></p>
+                </div>
+                <div class="grid_cell center">
+                    <p id="hex_container_leggins"></p>
+                </div>
+                <div class="grid_cell center">
+                    <p id="hex_container_boots"></p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <p class="ui">Made with <span style="color: red;"><3</span> by @cringekitsune</p>
+        </div>
+    </main>
+
+    <script src="./assets/data/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</body>
+
+</html>

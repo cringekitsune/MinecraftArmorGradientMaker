@@ -1,0 +1,254 @@
+* {
+    color-scheme: dark;
+    font-family: MinecraftRegular;
+    font-size: 16px;
+}
+
+@font-face {
+    font-family: MinecraftRegular;
+    src: url(../data/MinecraftRegular-Bmg3.otf);
+}
+
+@font-face {
+    font-family: MinecraftBold;
+    src: url(../data/MinecraftBold-nMK1.otf);
+}
+
+.ui {
+    padding: 1em;
+}
+
+body {
+    background-image: url(../media/background.png);
+    margin: 0px;
+}
+
+header {
+    position: relative;
+}
+
+header .background {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+header .logo {
+    width: 500px;
+    max-width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(0px 10px 15px #000000);
+}
+
+h1,
+h2,
+h3 {
+    font-family: MinecraftBold;
+}
+
+p {
+    margin: 0.5em;
+}
+
+.grid {
+    display: flex;
+    gap: 0.5em;
+    height: fit-content;
+}
+
+.grid_section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.grid_cell {
+    background-color: #303030;
+    height: 64px;
+    image-rendering: pixelated;
+}
+
+.other-grid {
+    display: grid;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+}
+
+.simple-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em;
+    padding: 1em;
+}
+
+.flex-inside {
+    display: flex;
+    gap: 0.25em;
+}
+
+#helmet,
+#chestplate,
+#leggins,
+#boots {
+    width: 64px;
+}
+
+#accuracy_container_helmet,
+#accuracy_container_chestplate,
+#accuracy_container_leggins,
+#accuracy_container_boots {
+    font-size: 24px;
+    font-family: MinecraftBold;
+    text-shadow: 3px 3px 0px #000000;
+}
+
+#hex_container_helmet,
+#hex_container_chestplate,
+#hex_container_leggins,
+#hex_container_boots {
+    text-shadow: 3px 3px 0px #000000;
+}
+
+.dye {
+    width: 64px;
+    height: 64px;
+    image-rendering: pixelated;
+}
+
+#color-gradient {
+    width: 30px;
+    display: flex;
+}
+
+input[type="color"] {
+    display: none;
+}
+
+.ui-element {
+    border: none;
+    font-size: 16px;
+    background-color: #505050;
+    padding: 0em 0.5em;
+    height: 32px;
+    cursor: pointer;
+    text-shadow: 2px 2px 0px #000000;
+    background:
+        url(../media/ui/button-left.png) no-repeat left,
+        url(../media/ui/button-right.png) no-repeat right,
+        url(../media/ui/button-middle.png) repeat-x center;
+    background-size: auto 32px;
+    image-rendering: pixelated;
+}
+
+.ui-element:hover {
+    background:
+        url(../media/ui/button-highlighted-left.png) no-repeat left,
+        url(../media/ui/button-highlighted-right.png) no-repeat right,
+        url(../media/ui/button-highlighted-middle.png) repeat-x center;
+    background-size: auto 32px;
+    image-rendering: pixelated;
+}
+
+.ui-input {
+    border: none;
+    font-size: 16px;
+    background-color: #505050;
+    padding: 0em 0.5em;
+    height: 32px;
+    width: 80px;
+    cursor: pointer;
+    outline: none;
+
+    background:
+        url(../media/ui/input-left.png) no-repeat left,
+        url(../media/ui/input-right.png) no-repeat right,
+        url(../media/ui/input-middle.png) repeat-x center;
+    background-size: auto 32px;
+
+    image-rendering: pixelated;
+}
+
+label.ui-element {
+    display: inline-block;
+    line-height: 32px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+}
+
+.custom-color-input:hover {
+    border-color: #666;
+}
+
+.color {
+    width: 28px;
+    height: 28px;
+    border: 2px solid #000000
+}
+
+main {
+    width: 800px;
+    margin: 0 auto;
+    background-color: #00000080;
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    header .background {
+        width: 100%;
+        height: 130px;
+        object-fit: cover;
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-size: 1.5em;
+    }
+
+    .grid {
+
+        align-items: center;
+    }
+
+    .grid_section {
+        width: 100%;
+    }
+
+    .grid_cell {
+        height: auto;
+        width: 100%;
+        text-align: center;
+    }
+
+    .ui {
+        flex-direction: column;
+    }
+
+    .flex-inside {
+        flex-direction: column;
+    }
+
+    .ui-element,
+    .ui-input {
+        width: max-content;
+    }
+
+    .color {
+        width: 24px;
+        height: 24px;
+    }
+}
